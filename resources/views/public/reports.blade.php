@@ -130,8 +130,17 @@
                                             <div class="row p-3">
                                                 <div class="col-12 only-mobile text-center">
                                                     <h6>
+                                                        <b>إسم التقرير:</b>
                                                         {{ $report->name }}
                                                     </h6>
+                                                    <p>
+                                                        <b>المصدر:</b>
+                                                        {{ $report->source }}
+                                                    </p>
+                                                    <p>
+                                                        <b>العام:</b>
+                                                        {{ date('Y', strtotime($report->published_at)) }}
+                                                    </p>
                                                 </div>
                                                 <div class="col-6 only-mobile">
                                                     <a class="btn btn-primary text-center view-report" href="#!"
@@ -193,7 +202,8 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <iframe id="viewer-iframe" src="https://example.com" style="width:100%; height:80vh;" frameborder="0"></iframe>
+                    <iframe id="viewer-iframe" src="https://example.com" style="width:100%; height:80vh;"
+                        frameborder="0"></iframe>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">
