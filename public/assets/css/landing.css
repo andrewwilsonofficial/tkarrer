@@ -1,12 +1,9 @@
 #top-section {
-    background-image: url("../images/hero-background.webp");
-    background-size: cover;
-    background-position: center;
-    height: 700px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: black;
     text-align: center;
 }
 
@@ -29,7 +26,8 @@ input[type="text"] {
 
 .main-title {
     font-size: 40px;
-    margin-bottom: 50px;
+    font-weight: bolder;
+    margin-bottom: 15px;
 }
 
 .sub-title {
@@ -46,14 +44,15 @@ input[type="text"] {
 
     input {
         flex: 1;
+        border: 3px solid #3e82e0a2;
         font-size: 1.1em;
 
-        -webkit-border-top-right-radius: 10px;
-        -webkit-border-bottom-right-radius: 10px;
-        -moz-border-radius-topright: 10px;
-        -moz-border-radius-bottomright: 10px;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
+        -webkit-border-top-right-radius: 9999px;
+        -webkit-border-bottom-right-radius: 9999px;
+        -moz-border-radius-topright: 9999px;
+        -moz-border-radius-bottomright: 9999px;
+        border-top-right-radius: 9999px;
+        border-bottom-right-radius: 9999px;
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
         box-shadow: none;
@@ -69,14 +68,15 @@ input[type="text"] {
     button {
         padding-left: .75rem;
 
+        border: 3px solid #3e82e0a2;
         background-color: #fff;
-        -webkit-border-top-left-radius: 10px;
-        -webkit-border-bottom-left-radius: 10px;
-        -moz-border-radius-topleft: 10px;
-        -moz-border-radius-bottomleft: 10px;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-        border: 1px solid #ccc;
+        -webkit-border-top-left-radius: 9999px;
+        -webkit-border-bottom-left-radius: 9999px;
+        -moz-border-radius-topleft: 9999px;
+        -moz-border-radius-bottomleft: 9999px;
+        border-top-left-radius: 9999px;
+        border-bottom-left-radius: 9999px;
+        border-left: none;
         border-right: none;
         cursor: pointer;
         cursor: hand;
@@ -89,14 +89,14 @@ input[type="text"] {
             text-transform: uppercase;
             font-weight: 300;
             color: #fff;
-            background-color: #3B5998;
+            background-color: transparent;
             margin: auto;
             padding: 10px 13px 10px 13px;
 
             border-radius: 10px;
 
             &:hover {
-                background-color: #234286;
+                background-color: transparent;
             }
         }
     }

@@ -41,7 +41,7 @@ class ReportsController extends Controller
 
         if (request('published_at')) {
             $published_at = request('published_at');
-            $reports->whereDate('published_at', request('published_at'));
+            $reports->whereYear('published_at', request('published_at'));
         } else {
             $published_at = null;
         }
@@ -90,7 +90,7 @@ class ReportsController extends Controller
 
         if (request('published_at')) {
             $published_at = request('published_at');
-            $reports->whereDate('published_at', request('published_at'));
+            $reports->whereYear('published_at', request('published_at'));
         } else {
             $published_at = null;
         }

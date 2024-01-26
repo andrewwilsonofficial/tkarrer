@@ -57,7 +57,8 @@
                 <div class="col-12 mt-5">
                     <div class="scrollable-pills">
                         @foreach ($sources as $index => $source)
-                            <a href="{{ url()->current() }}?source={{ $source->source }}">
+                            <a
+                                href="{{ url()->current() }}{{ $currentSource == $source->source ? '' : '?source=' . $source->source }}">
                                 <span class="source-badge {{ $currentSource == $source->source ? 'active' : '' }}">
                                     {{ $source->source }}
                                 </span>
@@ -99,9 +100,10 @@
                                                 </div>
                                                 <div class="col-md-2 options-column text-right d-flex align-items-center">
                                                     <span class="view-button">
-                                                        <a class="text-dark d-flex align-items-center"
-                                                            href="{{ route('view-report', ['report' => $report->id]) }}"
-                                                            target="_blank">
+                                                        <a class="text-dark d-flex align-items-center view-report"
+                                                            href="#!"
+                                                            data-link="{{ asset('uploads/' . $report->file_path) }}"
+                                                            data-toggle="modal" data-target="#viewerModal">
                                                             اطلاع
                                                             <img class="mr-2" src="{{ asset('assets/images/eye.svg') }}"
                                                                 alt="اطلاع">
@@ -132,9 +134,9 @@
                                                     </h6>
                                                 </div>
                                                 <div class="col-6 only-mobile">
-                                                    <a class="btn btn-primary text-center"
-                                                        href="{{ route('view-report', ['report' => $report->id]) }}"
-                                                        target="_blank">
+                                                    <a class="btn btn-primary text-center view-report" href="#!"
+                                                        data-link="{{ asset('uploads/' . $report->file_path) }}"
+                                                        data-toggle="modal" data-target="#viewerModal">
                                                         اطلاع
                                                         <img class="mr-2" src="{{ asset('assets/images/eye.svg') }}"
                                                             alt="اطلاع">
@@ -145,7 +147,8 @@
                                                         href="{{ route('download-report', ['report' => $report->id]) }}"
                                                         target="_blank">
                                                         تحميل
-                                                        <img class="mr-2" src="{{ asset('assets/images/download.svg') }}"
+                                                        <img class="mr-2"
+                                                            src="{{ asset('assets/images/download.svg') }}"
                                                             alt="اطلاع">
                                                     </a>
                                                 </div>
@@ -184,4 +187,20 @@
             </div>
         </div>
     </section>
+
+    <div class="modal fade" id="viewerModal" tabindex="-1" role="dialog" aria-labelledby="viewerModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <iframe id="viewer-iframe" src="#" style="width:100%; height:80vh;" frameborder="0"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        اغلاق
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
