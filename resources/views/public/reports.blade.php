@@ -193,7 +193,7 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <iframe id="viewer-iframe" src="#" style="width:100%; height:80vh;" frameborder="0"></iframe>
+                    <iframe id="viewer-iframe" src="https://example.com" style="width:100%; height:80vh;" frameborder="0"></iframe>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">

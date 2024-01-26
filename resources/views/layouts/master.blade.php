@@ -57,7 +57,10 @@
         $("body").on("click", ".view-report", function() {
             var link = $(this).data('link'),
                 link = "https://docs.google.com/gview?url=" + link + "&embedded=true";
-            $("#viewer-iframe").attr('src', link);
+            $("#viewer-iframe").hide();
+            $("#viewer-iframe").attr('src', link).on('load', function() {
+                $("#viewer-iframe").show();
+            });
         });
     </script>
 </body>
