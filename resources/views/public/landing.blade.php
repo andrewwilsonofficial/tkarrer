@@ -10,9 +10,9 @@
             <p class="sub-title">
                 اكتشف ثروة من المراجع والتقارير والادلة بسهولة
             </p>
-            <form action="#" method="get">
+            <form action="{{ route('search') }}" method="get">
                 <div class="searchbox-wrap">
-                    <input type="text" placeholder="ابحث عن ادلة او تقارير">
+                    <input type="text" name="search" placeholder="ابحث عن ادلة او تقارير" required>
                     <button>
                         <span>
                             <img src="{{ asset('assets/images/search-icon.svg') }}" alt="بحث" width="20">

@@ -8,11 +8,16 @@ use Illuminate\Http\Request;
 
 class ReportsController extends Controller
 {
-    public function index($slug)
+    public function index($slug = null)
     {
         $page_title = 'التقارير والدراسات';
-        $category = Category::where('slug', $slug)->firstOrFail();
-        $sources = Report::select('source')->where('report_type', 'report')->where('category_id', $category->id)->groupBy('source')->get();
+        if ($slug == null) {
+            $category = null;
+            $sources = Report::select('source')->where('report_type', 'report')->groupBy('source')->get();
+        } else {
+            $category = Category::where('slug', $slug)->firstOrFail();
+            $sources = Report::select('source')->where('report_type', 'report')->where('category_id', $category->id)->groupBy('source')->get();
+        }
 
         $reports = Report::query();
         $reports = Report::where('report_type', 'report');
@@ -41,18 +46,27 @@ class ReportsController extends Controller
             $published_at = null;
         }
 
-        $reports = $reports->where('category_id', $category->id);
+        if ($category) {
+            $reports = $reports->where('category_id', $category->id);
+        }
 
         $reports = $reports->orderBy('published_at', 'desc')->paginate(10)->withQueryString();
 
         return view('public.reports', compact('category', 'sources', 'reports', 'currentSource', 'search', 'published_at', 'page_title'));
     }
 
-    public function proofs($slug)
+    public function proofs($slug = null)
     {
         $page_title = 'الأدلة المعرفية';
-        $category = Category::where('slug', $slug)->firstOrFail();
-        $sources = Report::select('source')->where('report_type', 'proof')->where('category_id', $category->id)->groupBy('source')->get();
+
+
+        if ($slug == null) {
+            $category = null;
+            $sources = Report::select('source')->where('report_type', 'proof')->groupBy('source')->get();
+        } else {
+            $category = Category::where('slug', $slug)->firstOrFail();
+            $sources = Report::select('source')->where('report_type', 'proof')->where('category_id', $category->id)->groupBy('source')->get();
+        }
 
         $reports = Report::query();
         $reports = Report::where('report_type', 'proof');
@@ -81,11 +95,24 @@ class ReportsController extends Controller
             $published_at = null;
         }
 
-        $reports = $reports->where('category_id', $category->id);
+        if ($category) {
+            $reports = $reports->where('category_id', $category->id);
+        }
 
         $reports = $reports->orderBy('published_at', 'desc')->paginate(10)->withQueryString();
 
         return view('public.reports', compact('category', 'sources', 'reports', 'currentSource', 'search', 'published_at', 'page_title'));
+    }
+
+    public function search()
+    {
+        $page_title = 'نتائج البحث عن: ' . request('search');
+        $search = request('search');
+
+        $reportsCount = Report::where('name', 'like', '%' . request('search') . '%')->where('report_type', 'report')->count();
+        $proofsCount = Report::where('name', 'like', '%' . request('search') . '%')->where('report_type', 'proof')->count();
+
+        return view('public.search', compact('page_title', 'search', 'reportsCount', 'proofsCount'));
     }
 
     public function viewReport(Report $report)

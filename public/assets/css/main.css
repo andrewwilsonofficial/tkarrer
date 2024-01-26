@@ -239,12 +239,20 @@ nav a {
     width: 100%;
 }
 
+.only-mobile {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
     .source-column,
     .date-column,
     .options-column,
     .titles {
         display: none !important;
+    }
+
+    .only-mobile {
+        display: unset !important;
     }
 }
 

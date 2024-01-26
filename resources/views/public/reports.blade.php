@@ -24,12 +24,12 @@
                         </svg>
                     </span>
                     <span>
-                        {{ $category->name }}
+                        {{ $category->name ?? 'جميع المصادر' }}
                     </span>
                 </div>
                 <div class="col-12 mt-3">
                     <h3>
-                        {{ $category->name }}
+                        {{ $category->name ?? 'جميع المصادر' }}
                     </h3>
                 </div>
                 <div class="col-md-5">
@@ -126,16 +126,40 @@
                                         </label>
                                         <div class="accordion-content">
                                             <div class="row p-3">
-                                                <div class="col-12">
+                                                <div class="col-12 only-mobile text-center">
                                                     <h6>
-                                                        نبذه مختصرة
+                                                        {{ $report->name }}
                                                     </h6>
                                                 </div>
-                                                <div class="col-12 mt-3">
+                                                <div class="col-6 only-mobile">
+                                                    <a class="btn btn-primary text-center"
+                                                        href="{{ route('view-report', ['report' => $report->id]) }}"
+                                                        target="_blank">
+                                                        اطلاع
+                                                        <img class="mr-2" src="{{ asset('assets/images/eye.svg') }}"
+                                                            alt="اطلاع">
+                                                    </a>
+                                                </div>
+                                                <div class="col-6 only-mobile mb-3">
+                                                    <a class="btn btn-primary text-center"
+                                                        href="{{ route('download-report', ['report' => $report->id]) }}"
+                                                        target="_blank">
+                                                        تحميل
+                                                        <img class="mr-2" src="{{ asset('assets/images/download.svg') }}"
+                                                            alt="اطلاع">
+                                                    </a>
+                                                </div>
+                                                <div class="col-12">
+                                                    <h5>
+                                                        نبذه مختصرة
+                                                    </h5>
+                                                </div>
+                                                <div class="col-12 mt-2">
                                                     {{ $report->description }}
                                                 </div>
                                                 <div class="col-12 mt-2">
-                                                    <a href="{{ $report->url }}" class="font-weight-bold" target="_blank">
+                                                    <a href="{{ $report->url }}" class="font-weight-bold"
+                                                        target="_blank">
                                                         رابط التقرير الاساسي
                                                     </a>
                                                 </div>
