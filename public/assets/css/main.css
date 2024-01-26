@@ -100,7 +100,6 @@ nav a {
     left: 0;
     bottom: 0;
     right: 0;
-    
 }
 
 ._4jKGSa .-cUJrF {
@@ -349,6 +348,10 @@ nav a {
     display: none !important;
 }
 
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
 @media (max-width: 768px) {
     .source-column,
     .date-column,
@@ -359,6 +362,10 @@ nav a {
 
     .only-mobile {
         display: unset !important;
+    }
+
+    header {
+        background: white !important;
     }
 }
 

@@ -122,6 +122,9 @@ class ReportsController extends Controller
 
     public function downloadReport(Report $report)
     {
-        return response()->download(public_path('uploads/' . $report->file_path));
+        // return response()->download(public_path('uploads/' . $report->file_path));
+
+        // Download the file but with the same name as report name
+        return response()->download(public_path('uploads/' . $report->file_path), $report->name . '.pdf');
     }
 }

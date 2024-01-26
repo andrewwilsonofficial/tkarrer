@@ -58,7 +58,9 @@
             var link = $(this).data('link'),
                 link = "https://docs.google.com/gview?url=" + link + "&embedded=true";
             $("#viewer-iframe").hide();
+            $("#loading").show();
             $("#viewer-iframe").attr('src', link).on('load', function() {
+                $("#loading").hide();
                 $("#viewer-iframe").show();
             });
         });
