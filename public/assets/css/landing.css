@@ -41,8 +41,8 @@ input[type="text"] {
     margin-top: 8%;
     margin-left: auto;
     margin-right: auto;
-  }
-  .searchbox-wrap input {
+}
+.searchbox-wrap input {
     flex: 1;
     border: 3px solid #3e82e0a2;
     font-size: 1.1em;
@@ -58,11 +58,12 @@ input[type="text"] {
     border-left: none;
     margin: 0;
     padding: 20px;
-  }
-  .searchbox-wrap input:active, .searchbox-wrap input:focus {
+}
+.searchbox-wrap input:active,
+.searchbox-wrap input:focus {
     outline: none;
-  }
-  .searchbox-wrap button {
+}
+.searchbox-wrap button {
     padding-left: 0.75rem;
     border: 3px solid #3e82e0a2;
     background-color: #fff;
@@ -76,8 +77,8 @@ input[type="text"] {
     border-right: none;
     cursor: pointer;
     cursor: hand;
-  }
-  .searchbox-wrap button span {
+}
+.searchbox-wrap button span {
     margin-left: 50px;
     padding: 4px 14px;
     font-size: 0.9em;
@@ -88,8 +89,7 @@ input[type="text"] {
     margin: auto;
     padding: 10px 13px 10px 13px;
     border-radius: 10px;
-  }
-  .searchbox-wrap button span:hover {
+}
+.searchbox-wrap button span:hover {
     background-color: transparent;
-  }
-  
+}

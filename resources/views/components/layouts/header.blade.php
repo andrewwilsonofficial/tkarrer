@@ -1,6 +1,8 @@
 <header>
     <div class="header-logo">
-        <img src="{{ asset('assets/images/logo-black.svg') }}" alt="{{ config('app.name') }}">
+        <a href="{{ route('home') }}">
+            <img src="{{ asset('assets/images/logo-black.svg') }}" alt="{{ config('app.name') }}">
+        </a>
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-light pr-0">
