@@ -338,10 +338,11 @@ nav a {
 }
 
 .report-name {
-    white-space: nowrap;
+    white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
+    font-size: 13px;
 }
 
 .only-mobile {

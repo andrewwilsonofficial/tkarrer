@@ -34,7 +34,6 @@
             todayHighlight: false,
             endDate: new Date(),
             language: 'ar',
-            rtl: true,
         }).on('changeDate', function(e) {
             var year = e.format('yyyy');
             window.location.href = "{{ url()->current() }}?published_at=" + year;

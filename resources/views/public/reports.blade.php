@@ -7,7 +7,9 @@
             <div class="row">
                 <div class="col-12">
                     <span>
-                        الرئيسية
+                        <a href="{{ route('home') }}" class="text-dark">
+                            الرئيسية
+                        </a>
                     </span>
                     <span class="mx-2">
                         <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,7 +17,9 @@
                         </svg>
                     </span>
                     <span>
-                        {{ $page_title }}
+                        <a href="{{ $its_link }}" class="text-dark">
+                            {{ $page_title }}
+                        </a>
                     </span>
                     <span class="mx-2">
                         <svg width="9" height="12" viewBox="0 0 9 12" fill="none"

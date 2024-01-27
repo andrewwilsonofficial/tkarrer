@@ -11,6 +11,7 @@ class ReportsController extends Controller
     public function index($slug = null)
     {
         $page_title = 'التقارير والدراسات';
+        $its_link =  route('home') . "#reports-section";
         if ($slug == null) {
             $category = null;
             $sources = Report::select('source')->where('report_type', 'report')->groupBy('source')->get();
@@ -52,13 +53,13 @@ class ReportsController extends Controller
 
         $reports = $reports->orderBy('published_at', 'desc')->paginate(10)->withQueryString();
 
-        return view('public.reports', compact('category', 'sources', 'reports', 'currentSource', 'search', 'published_at', 'page_title'));
+        return view('public.reports', compact('category', 'sources', 'reports', 'currentSource', 'search', 'published_at', 'page_title', 'its_link'));
     }
 
     public function proofs($slug = null)
     {
         $page_title = 'الأدلة المعرفية';
-
+        $its_link =  route('home') . "#proff-section";
 
         if ($slug == null) {
             $category = null;
@@ -101,7 +102,7 @@ class ReportsController extends Controller
 
         $reports = $reports->orderBy('published_at', 'desc')->paginate(10)->withQueryString();
 
-        return view('public.reports', compact('category', 'sources', 'reports', 'currentSource', 'search', 'published_at', 'page_title'));
+        return view('public.reports', compact('category', 'sources', 'reports', 'currentSource', 'search', 'published_at', 'page_title', 'its_link'));
     }
 
     public function search()
@@ -122,9 +123,6 @@ class ReportsController extends Controller
 
     public function downloadReport(Report $report)
     {
-        // return response()->download(public_path('uploads/' . $report->file_path));
-
-        // Download the file but with the same name as report name
         return response()->download(public_path('uploads/' . $report->file_path), $report->name . '.pdf');
     }
 }
