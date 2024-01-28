@@ -32,12 +32,6 @@
             autoclose: true,
             clearBtn: true,
             todayHighlight: false,
-            // Highlight selected year
-            beforeShowYear: function(date) {
-                if (date.getFullYear() == {{ $published_at }}) {
-                    return 'selected';
-                }
-            },
             endDate: new Date(),
             language: 'ar',
         }).on('changeDate', function(e) {
