@@ -30,7 +30,7 @@
             viewMode: 'years',
             minViewMode: 'years',
             autoclose: true,
-            clearBtn: false,
+            clearBtn: true,
             todayHighlight: false,
             endDate: new Date(),
             language: 'ar',
