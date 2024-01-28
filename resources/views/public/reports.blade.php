@@ -215,7 +215,10 @@
                         frameborder="0"></iframe>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    <button type="button" class="btn btn-primary m-auto" id="legacy-link">
+                        لا يعمل؟ أنقر هنا
+                    </button>
+                    <button type="button" class="btn btn-secondary m-auto" data-dismiss="modal">
                         اغلاق
                     </button>
                 </div>

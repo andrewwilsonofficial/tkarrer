@@ -54,8 +54,25 @@
     </script>
     <script>
         $("body").on("click", ".view-report", function() {
-            var link = $(this).data('link'),
-                link = "https://docs.google.com/gview?url=" + link + "&embedded=true";
+            var link = $(this).data('link');
+            $("#legacy-link").attr("pdf-link", link);
+            var link = "https://docs.google.com/gview?url=" + link + "&embedded=true";
+            $("#viewer-iframe").hide();
+            $("#loading").show();
+            $("#viewer-iframe").attr('src', link).on('load', function() {
+                $("#loading").hide();
+                $("#viewer-iframe").show();
+            });
+        });
+
+        $("body").on("click", "#legacy-link", function() {
+            var link = $(this).attr('pdf-link');
+
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                window.open(link, '_blank');
+                return;
+            }
+
             $("#viewer-iframe").hide();
             $("#loading").show();
             $("#viewer-iframe").attr('src', link).on('load', function() {
