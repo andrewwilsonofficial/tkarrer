@@ -19,7 +19,7 @@
     <!-- Add Bootstrap JS and Popper.js -->
     <script src="{{ asset('assets/js/jquery-3.2.1.slim.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap-datepicker.min.js') }}?123"></script>
     <script>
         setInterval(() => {
             window.scrollTo(0, window.scrollY);
@@ -32,6 +32,12 @@
             autoclose: true,
             clearBtn: true,
             todayHighlight: false,
+            // Highlight selected year
+            beforeShowYear: function(date) {
+                if (date.getFullYear() == {{ $published_at }}) {
+                    return 'selected';
+                }
+            },
             endDate: new Date(),
             language: 'ar',
         }).on('changeDate', function(e) {
