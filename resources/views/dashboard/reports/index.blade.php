@@ -34,7 +34,7 @@
             <div class="col-12 mb-3">
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('admin-proofs') }}" method="GET">
+                        <form action="{{ route('admin-reports') }}" method="GET">
                             <div class="row">
                                 <div class="col-12 text-center mb-3">
                                     <h3>
