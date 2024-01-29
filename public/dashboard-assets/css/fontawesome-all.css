@@ -1,0 +1,76 @@
+/*!
+ * Font Awesome Pro 5.15.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ */
+ .fas,
+ .fal {
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+   display: inline-block;
+   font-style: normal;
+   font-variant: normal;
+   text-rendering: auto;
+   line-height: 1; }
+ 
+ /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+ readers do not read off random characters that represent icons */
+ 
+ .fa-bars:before {
+   content: "\f0c9"; }
+ 
+ .fa-chevron-up:before {
+   content: "\f077"; }
+ 
+ .fa-sign-in-alt:before {
+   content: "\f2f6"; }
+ 
+ .fa-times:before {
+   content: "\f00d"; }
+ 
+ .fa-user-plus:before {
+   content: "\f234"; }
+ @font-face {
+   font-weight: 400;
+   font-style: normal;
+   font-display: block;
+   font-family: 'Font Awesome 5 Brands';
+   src: url("../fonts/fa-brands-400.ttf") format("truetype")
+ }
+ @font-face {
+   font-weight: 900;
+   font-style: normal;
+   font-display: block;
+   font-family: 'Font Awesome 5 Duotone';
+   src: url("../fonts/fa-duotone-900.ttf") format("truetype")
+ }
+ @font-face {
+   font-weight: 300;
+   font-style: normal;
+   font-display: block;
+   font-family: 'Font Awesome 5 Pro';
+   src: url("../fonts/fa-light-300.ttf") format("truetype")
+ }
+ 
+ .fal {
+   font-weight: 300;
+   font-family: 'Font Awesome 5 Pro';
+ }
+ @font-face {
+   font-weight: 400;
+   font-style: normal;
+   font-display: block;
+   font-family: 'Font Awesome 5 Pro';
+   src: url("../fonts/fa-regular-400.ttf") format("truetype")
+ }
+ @font-face {
+   font-weight: 900;
+   font-style: normal;
+   font-display: block;
+   font-family: 'Font Awesome 5 Pro';
+   src: url("../fonts/fa-solid-900.ttf") format("truetype")
+ }
+ 
+ .fas {
+   font-weight: 900;
+   font-family: 'Font Awesome 5 Pro';
+ }

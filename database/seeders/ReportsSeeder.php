@@ -14,7 +14,7 @@ class ReportsSeeder extends Seeder
      */
     public function run(): void
     {
-        $reports = \App\Models\Report::factory()->count(1000)->create();
+        $reports = \App\Models\Report::factory()->count(10000)->create();
 
         foreach ($reports as $report) {
             $report->save();

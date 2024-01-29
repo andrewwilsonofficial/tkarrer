@@ -1,0 +1,1243 @@
+/*----------------------------------------------------
+
+1. Global Area 
+2. Header Section
+3. Banner Section / Slider Section
+4. Feature Section
+5. About Section
+6. Service Section
+7. Promo Section
+8. Why choose Section
+9. Team Section
+10. Faq Section
+11. Fun Fact Section
+12. Pricing Plan Section
+13. Testimonal Section
+14. Contact Section
+15. Blog Section
+16. Sponsor Section
+17. Project Section
+18. How Work Section
+17. Breadcrumb Section
+18. Shop Section
+19. Footer Section
+20. Responsive Section
+
+=====================================================================*/
+/*=========
+Font load
+===========*/
+@import url("https://fonts.googleapis.com/css2?family=Amiri&family=El+Messiri:wght@500&family=IBM+Plex+Sans+Arabic:wght@300&display=swap");
+/*=========
+Color Code
+===========*/
+:root {
+    --font: "IBM Plex Sans Arabic", sans-serif;
+    --color-primary: #0e3d4b;
+    --color-black: #000;
+    --color-deep: #0e3d4b;
+    --color-body: #535353;
+    --color-yellow: #ffa800;
+    --color-white: #fff;
+}
+
+/*global area*/
+/*----------------------------------------------------*/
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 16px;
+    text-align: right;
+    line-height: 1.5;
+    color: #555555;
+    font-family: var(--font);
+    -moz-osx-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 500;
+    color: var(--color-black);
+    margin: 0;
+    line-height: 1.2;
+    font-family: var(--font);
+}
+
+.scrollup {
+    width: 55px;
+    right: 20px;
+    z-index: 5;
+    height: 55px;
+    bottom: 20px;
+    display: none;
+    position: fixed;
+    border-radius: 100%;
+    line-height: 55px;
+    background-color: #02aaf9;
+}
+
+.scrollup i {
+    color: #fff;
+}
+
+.headline h2,
+.headline h3,
+.headline h4 {
+    margin: 0;
+    font-weight: normal;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+
+.pr-text-in_item2,
+.pr-text-in_item3 {
+    display: block;
+}
+
+.pr-text-in_item1,
+.pr-text-in_item2 {
+    overflow: hidden;
+}
+
+.pr-text-in_item2,
+.pr-text-in_item3 {
+    -webkit-transition-duration: 1.5s;
+    transition-duration: 1.5s;
+    -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+}
+
+.pr-text-in_item2 {
+    -webkit-transform: translate3d(-100.5%, 0, 0);
+    transform: translate3d(-100.5%, 0, 0);
+}
+
+.pr-text-in_item3 {
+    padding-bottom: 6px;
+    -webkit-transform: translate3d(100.1%, 0, 0);
+    transform: translate3d(100.1%, 0, 0);
+}
+
+.pr-text-in.is_shown .pr-text-in_item2,
+.pr-text-in.is_shown .pr-text-in_item3 {
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.clinox-section-title h2 {
+    color: #101010;
+    font-size: 42px;
+    font-weight: 700;
+    padding: 5px 0px;
+}
+
+@-webkit-keyframes btn_shine {
+    100% {
+        left: 200%;
+    }
+}
+@keyframes btn_shine {
+    100% {
+        left: 200%;
+    }
+}
+.clinox-btn a {
+    color: #101010;
+    height: 55px;
+    z-index: 1;
+    width: 250px;
+    font-weight: 600;
+    overflow: hidden;
+    border-radius: 6px;
+    position: relative;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    background-color: #02aaf9;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(1, 83, 159, 0.4);
+    box-shadow: 0px 0px 20px 0px rgba(1, 83, 159, 0.4);
+}
+.clinox-btn a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -200%;
+    width: 200%;
+    height: 100%;
+    -webkit-transform: skewX(-20deg);
+    -khtml-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(transparent),
+        color-stop(rgba(255, 255, 255, 0.4)),
+        to(transparent)
+    );
+    background-image: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    z-index: -1;
+}
+.clinox-btn a:hover {
+    color: #fff;
+    background-color: #02aaf9;
+}
+.clinox-btn a:hover:after {
+    -webkit-animation: btn_shine 1.2s ease;
+    animation: btn_shine 1.2s ease;
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.top-position {
+    top: -35px;
+    margin-bottom: -35px;
+}
+
+@-webkit-keyframes btn_shine {
+    100% {
+        left: 200%;
+    }
+}
+@keyframes btn_shine {
+    100% {
+        left: 200%;
+    }
+}
+
+/*---------------------------------------------------- */
+/*--
+    - Margin & Padding
+-----------------------------------------*/
+/*-- Margin Top --*/
+
+/*-- Margin Top --*/
+
+/*-- Margin Bottom --*/
+
+/*-- Margin Left --*/
+
+/*-- Margin Right --*/
+
+/*-- Padding Top --*/
+
+/*-- Padding Bottom --*/
+
+/*-- Padding Left --*/
+
+/*-- Padding Right --*/
+.pr-5 {
+    padding-right: 5px;
+}
+
+/*---------------------------------------------------- */
+/*Header area*/
+/*----------------------------------------------------*/
+.clinox-header-section {
+    z-index: 10;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.clinox-header-section .sticky-brand-logo {
+    display: none;
+    width: 145px;
+}
+
+.header-navigation-content {
+    padding: 8px 30px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+.header-navigation-content .navbar-nav {
+    display: inherit;
+}
+.header-navigation-content .main-navigation li {
+    margin-right: 60px;
+}
+.header-navigation-content .main-navigation li a {
+    color: black;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+.header-navigation-content .main-navigation li:hover a {
+    color: #02aaf9;
+}
+
+.clinox-header-section.sticky-on {
+    top: 0;
+    width: 100%;
+    z-index: 20;
+    position: fixed;
+    padding: 10px 0px;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    background-color: white;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+    -webkit-box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 0 !important;
+}
+.clinox-header-section.sticky-on .sticky-brand-logo {
+    display: block;
+}
+.clinox-header-section.sticky-on .header-navigation-content {
+    padding: 5px 0;
+}
+
+/*Search popup Page*/
+/*-------------------*/
+
+/*Mobile area*/
+/*----------------------------------------------------*/
+
+.mobile_menu_content {
+    top: 0px;
+    bottom: 0;
+    right: -50%;
+    height: 100vh;
+    z-index: 101;
+    position: fixed;
+    width: 36%;
+    overflow-y: scroll;
+    background-color: #fff;
+    padding: 20px 0px 35px 0px;
+    -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.19);
+    box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.19);
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+.mobile_menu_content .mobile-main-navigation {
+    width: 100%;
+}
+.mobile_menu_content .mobile-main-navigation .navbar-nav {
+    width: 100%;
+}
+.mobile_menu_content .mobile-main-navigation .navbar-nav li {
+    width: 100%;
+    display: block;
+    -webkit-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+}
+.mobile_menu_content .mobile-main-navigation .navbar-nav li a {
+    padding: 0;
+    width: 100%;
+    color: #101010;
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    text-transform: uppercase;
+    padding: 10px 30px 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.mobile_menu_content .m-brand-logo {
+    width: 120px;
+    margin: 50px auto;
+}
+
+.mobile_menu_overlay {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    right: 0%;
+    height: 120vh;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgb(0 0 0 / 0%);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.mobile_menu_button {
+    right: 15px;
+    top: 9px;
+    z-index: 5;
+    color: black;
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 38px;
+    position: absolute;
+    text-align: center;
+}
+
+.mobile_menu .mobile-main-navigation .navbar-nav li a:after {
+    display: none;
+}
+.mobile_menu .mobile_menu_close {
+    color: #d60606;
+    cursor: pointer;
+    top: 6px;
+    left: 17px;
+    font-size: 20px;
+    position: absolute;
+}
+
+.mobile_menu_wrap.mobile_menu_on .mobile_menu_content {
+    right: 0px;
+    -webkit-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+}
+
+.mobile_menu_wrap.mobile_menu_on .mobile_menu_overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.clinox-header-section.header-style-three
+    .mobile_menu_wrap.mobile_menu_on
+    .mobile_menu_content {
+    left: 0px;
+    -webkit-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+}
+
+.clinox-header-section.header-style-three
+    .mobile_menu_wrap.mobile_menu_on
+    .mobile_menu_overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*---------------------------------------------------- */
+/*Banner area*/
+/*----------------------------------------------------*/
+.clinox-banner-section {
+    padding: 60px 0px 100px;
+    direction: rtl;
+    background-size: contain;
+    background-position: right;
+    background-color: #e5e5e5;
+}
+
+.banner-form-wrapper {
+    float: right;
+    max-width: 430px;
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 40px 40px 50px;
+    direction: rtl;
+    background-color: rgb(255 255 255 / 66%);
+    border: 3px solid #000e58;
+}
+.banner-form-wrapper form {
+    position: relative;
+    z-index: 9;
+}
+.banner-form-wrapper form input::-webkit-input-placeholder {
+    color: #7a7a7a;
+}
+.banner-form-wrapper form input::-moz-placeholder {
+    color: #7a7a7a;
+}
+.banner-form-wrapper form input:-ms-input-placeholder {
+    color: #7a7a7a;
+}
+.banner-form-wrapper form input::-ms-input-placeholder {
+    color: #7a7a7a;
+}
+.banner-form-wrapper form .btn {
+    width: 100%;
+    color: #fff;
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+    -webkit-transition: 500ms all ease;
+    transition: 500ms all ease;
+    background-color: #02aaf9;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.banner-form-wrapper form .btn:hover {
+    background-color: #000e58;
+}
+
+/*slider area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Feature area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*About area*/
+/*----------------------------------------------------*/
+.clinox-about-section {
+    padding: 40px 0px;
+}
+
+.clinox-about-img-wrapper:before {
+    left: 0;
+    right: 0;
+    top: 50%;
+    content: "";
+    max-width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: #ffcd05;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+.clinox-about-img-wrapper .clinox-about-img1 {
+    -webkit-mask-image: url(../img/bg/ab-bg.png);
+    mask-image: url(../img/bg/ab-bg.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+.clinox-about-img-wrapper .about-exp {
+    right: 6px;
+    bottom: 0;
+    color: #fff;
+    width: 272px;
+    height: 90px;
+    background-color: #000e58;
+}
+.clinox-about-img-wrapper .about-exp h3 {
+    color: #fff;
+    font-size: 52px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+.clinox-about-img-wrapper .about-exp span {
+    width: 90px;
+    color: #fff;
+    max-width: 90px;
+    font-weight: 500;
+}
+
+.clinox-about-text-wrap {
+    padding: 15px 0px 0px 30px;
+}
+
+.about-feature-wrapper {
+    margin-top: 40px;
+}
+
+.about-feature-item-wrap {
+    margin-bottom: 50px;
+}
+
+.about-feature-item {
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 30px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 61px 0px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 0px 61px 0px rgba(0, 0, 0, 0.07);
+}
+.about-feature-item:before {
+    top: 0;
+    right: 0;
+    z-index: -1;
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: 700ms all ease;
+    transition: 700ms all ease;
+    background-color: #02aaf9;
+}
+.about-feature-item:hover:before {
+    width: 100%;
+}
+.about-feature-item:hover .about-ft-text h3 {
+    color: #fff;
+}
+.about-feature-item:hover .about-ft-icon {
+    background-color: #000e58;
+}
+.about-feature-item:last-child {
+    margin-bottom: 0;
+}
+.about-feature-item .about-ft-icon {
+    max-width: 20px;
+    min-width: 20px;
+    height: 75px;
+    margin-left: 20px;
+    background-color: #02aaf9;
+    -webkit-transition: 500ms all ease;
+    transition: 500ms all ease;
+}
+.about-feature-item .about-ft-text {
+    z-index: 1;
+}
+.about-feature-item .about-ft-text h3 {
+    color: #101010;
+    font-size: 20px;
+    font-weight: 700;
+    -webkit-transition: 500ms all ease;
+    transition: 500ms all ease;
+}
+
+/*---------------------------------------------------- */
+/*Service area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Promo area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Why choose area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Team area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Faq area*/
+/*----------------------------------------------------*/
+.clinox-faq-section {
+    overflow: hidden;
+    padding: 20px 0px 30px;
+}
+
+.clinox-faq-text-wrapper {
+    padding-left: 30px;
+}
+
+.clinox-faq-accordion {
+    margin-top: 40px;
+}
+.clinox-faq-accordion .accordion-header button {
+    color: #101010;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px 30px;
+}
+.clinox-faq-accordion .accordion-button:focus {
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.clinox-faq-accordion .accordion-item {
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+}
+.clinox-faq-accordion .accordion-body {
+    padding: 20px 30px 30px;
+}
+.clinox-faq-accordion .accordion-button:not(.collapsed) {
+    color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #02aaf9;
+}
+.clinox-faq-accordion .accordion-button::after {
+    left: 25px;
+    height: auto;
+    width: auto;
+    font-size: 15px;
+    content: "\f078";
+    font-weight: 900;
+    position: absolute;
+    background-image: none;
+    font-family: "Font Awesome 5 Pro";
+}
+.clinox-faq-accordion .accordion-button:not(.collapsed)::after {
+    content: "\f068";
+}
+.clinox-faq-accordion .accordion-collapse.show {
+    background-color: var(--black-color);
+}
+
+/*---------------------------------------------------- */
+/*Fun Fact area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Pricing Plan area*/
+/*----------------------------------------------------*/
+.clinox-pricing-plan-section {
+    padding: 40px 0px;
+    background-color: #f2fcfc;
+}
+
+.clinox-pricing-plan-content {
+    padding-top: 40px;
+}
+
+.clinox-pricing-item {
+    padding: 15px 15px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.06);
+}
+.clinox-pricing-item .price-header-icon-value {
+    margin-bottom: 25px;
+}
+.clinox-pricing-item .price-header-icon-value h3 {
+    color: #101010;
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 28px;
+}
+.clinox-pricing-item .price-header-icon-value h4 {
+    color: #101010;
+    font-size: 42px;
+    font-weight: 700;
+}
+.clinox-pricing-item .price-feature li {
+    text-align: right;
+    padding-right: 25px;
+    position: relative;
+    margin-bottom: 33px;
+}
+.clinox-pricing-item .price-feature li:before {
+    top: 0;
+    right: 0;
+    content: "\f00c";
+    font-weight: 900;
+    color: #02aaf9;
+    position: absolute;
+    font-family: "Font Awesome 5 Pro";
+}
+
+/*---------------------------------------------------- */
+/*Testimonials area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Contact area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Blog area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Sponsor area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Project area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*How Work area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Breadcrumb area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Shop area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/* backtoup */
+
+/*---------------------------------------------------- */
+/*----------------------------------------*/
+/*  18. preloder
+/*----------------------------------------*/
+/*---------------------------------------------------- */
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* .text-marquee-track:hover {
+	animation-play-state: paused;
+} */
+
+/* play btn animation */
+
+/* animation */
+
+/* sidebar */
+
+/*---------------------------------------------------- */
+/*Global area*/
+/*----------------------------------------------------*/
+/*=========
+Font load
+===========*/
+@font-face {
+    font-family: "Segoe Print V1";
+    src: url("../fonts/c455d94eee43dc4ceeb83c0c0fd0d4c8.eot");
+    src: url("../fonts/c455d94eee43dc4ceeb83c0c0fd0d4c8-1.eot")
+            format("embedded-opentype"),
+        url("../fonts/c455d94eee43dc4ceeb83c0c0fd0d4c8.woff2") format("woff2"),
+        url("../fonts/c455d94eee43dc4ceeb83c0c0fd0d4c8.woff") format("woff"),
+        url("../fonts/c455d94eee43dc4ceeb83c0c0fd0d4c8.ttf") format("truetype"),
+        url("../fonts/c455d94eee43dc4ceeb83c0c0fd0d4c8.svg") format("svg");
+}
+/*=========
+Color Code
+===========*/
+/*---------------------------------------------------- */
+/*Banner area*/
+/*Header area*/
+/*----------------------------------------------------*/
+
+.sticky-on .logo-li {
+    display: none !important;
+}
+
+/*Search popup Page*/
+/*-------------------*/
+
+/*Mobile area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Banner area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Estimate area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*About area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Service area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Why choose area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Fun fact area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Faq area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*how work area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Project area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Testimonial area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Price area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Blog area*/
+/*----------------------------------------------------*/
+
+/*---------------------------------------------------- */
+/*Footer area*/
+/*----------------------------------------------------*/
+
+.clinox-copyright-wrap {
+    color: #fff;
+    margin-top: 50px;
+    padding: 20px 0px;
+    background-color: #0472ee;
+}
+
+/*---------------------------------------------------- */
+/*Responsive area*/
+/*----------------------------------------------------*/
+@media screen and (max-width: 1100px) {
+    .header-navigation-content .main-navigation li {
+        margin-right: 35px;
+    }
+    .header-navigation-content {
+        padding-left: 0;
+    }
+    .clinox-header-section.sticky-on
+        .header-navigation-content
+        .main-navigation
+        li {
+        margin-right: 20px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .clinox-header-section .sticky-brand-logo {
+        display: block;
+    }
+}
+@media screen and (max-width: 480px) {
+    .clinox-copyright-wrap {
+        margin-top: 20px;
+    }
+}
+/*---------------------------------------------------- */
+/*footer area*/
+/*----------------------------------------------------*/
+.clinox-footer-section-1 {
+    padding: 50px 0px 50px;
+}
+
+.clinox-copyright-wrap {
+    color: #fff;
+    margin-top: 0;
+}
+
+/*---------------------------------------------------- */
+/*Responsive area*/
+/*----------------------------------------------------*/
+@media screen and (max-width: 1024px) {
+    .clinox-section-title h2 {
+        font-size: 32px;
+    }
+    .about-feature-item-wrap {
+        padding-left: 25px;
+    }
+    .clinox-about-img-wrapper .about-exp {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .header-navigation-content .main-navigation li {
+        margin-right: 40px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .top-position {
+        top: 0;
+        margin: 0;
+    }
+    .header-navigation-content-wrapper {
+        position: relative;
+        background-color: white;
+    }
+    .clinox-header-section .sticky-brand-logo {
+        left: 0;
+        right: 0;
+        top: 50%;
+        margin: 0 auto;
+        display: block;
+        position: absolute;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .header-navigation-content {
+        padding: 25px 0px;
+        -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
+        justify-content: end !important;
+    }
+    .main-navigation {
+        display: none;
+    }
+    .clinox-header-section.sticky-on {
+        padding: 19px 0px;
+    }
+    .clinox-header-section.sticky-on .mobile_menu_button {
+        top: 7px;
+    }
+    .mobile_menu_button {
+        display: block;
+    }
+    .banner-form-wrapper {
+        float: none;
+        margin: 0 auto;
+    }
+    .clinox-about-img-wrapper {
+        max-width: 570px;
+        margin: 0 auto;
+    }
+    .clinox-about-text-wrap {
+        padding-left: 0;
+        padding-top: 40px;
+    }
+    .clinox-faq-text-wrapper {
+        padding-left: 0;
+    }
+    .clinox-pricing-item {
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 680px) {
+    .clinox-about-section {
+        padding: 60px 0px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .clinox-about-section {
+        padding: 60px 0px;
+    }
+    .clinox-section-title h2 {
+        font-size: 20px;
+    }
+    .clinox-faq-accordion .accordion-header button {
+        padding: 20px 15px;
+        padding-left: 40px;
+    }
+    .clinox-pricing-item .price-header-icon-value h4 {
+        font-size: 30px;
+    }
+    .clinox-pricing-item .price-header-icon-value h3 {
+        font-size: 26px;
+    }
+    .clinox-pricing-plan-section {
+        padding: 60px 0px 30px;
+    }
+    .clinox-faq-section {
+        padding: 20px 0px;
+    }
+}
+@media screen and (max-width: 380px) {
+    .clinox-about-img-wrapper:before {
+        display: none;
+    }
+}
+
+.form-check-input {
+    float: right;
+    margin-left: 0;
+    margin-right: -1.4rem;
+}
+
+/* Style the Google sign-in button */
+.login-with-google-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.login-with-google-btn:hover {
+    background-color: #f8f8f8;
+}
+
+.login-with-google-btn:active {
+    background-color: #f2f2f2;
+}
+
+/* Style the Google icon */
+.login-with-google-btn svg {
+    display: inline-block;
+    margin-right: 0.5rem;
+    width: 24px;
+    /* Set the width and height of the SVG icon as needed */
+    height: 24px;
+    fill: #000;
+    /* Set the color of the SVG icon */
+}
+
+.custom-border {
+    position: relative;
+}
+.custom-border::before,
+.custom-border::after {
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 30%;
+    transition: all 300ms ease-in-out;
+}
+.custom-border::before {
+    top: -10px;
+    left: -10px;
+    border-top: 3px solid #02aaf9;
+    border-left: 3px solid #117fb2;
+    border-top-left-radius: 15px;
+}
+.custom-border::after {
+    bottom: -10px;
+    right: -10px;
+    border-bottom: 3px solid #02aaf9;
+    border-right: 3px solid #117fb2;
+    border-bottom-right-radius: 15px;
+}
+.custom-border:hover::before {
+    width: calc(100% + 19px);
+    height: calc(100% + 19px);
+}
+.custom-border:hover::after {
+    width: calc(100% + 19px);
+    height: calc(100% + 19px);
+}
+
+.custom-border span {
+    position: absolute;
+    border-radius: 100vmax;
+}
+
+.top {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background: linear-gradient(
+        90deg,
+        transparent 50%,
+        rgba(255, 49, 49, 0.5),
+        rgb(255, 49, 49)
+    );
+}
+
+.bottom {
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background: linear-gradient(
+        90deg,
+        rgb(57, 255, 20),
+        rgba(57, 255, 20, 0.5),
+        transparent 50%
+    );
+}
+
+.right {
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 0;
+    background: linear-gradient(
+        180deg,
+        transparent 30%,
+        rgba(0, 255, 255, 0.5),
+        rgb(0, 255, 255)
+    );
+}
+
+.left {
+    left: 0;
+    bottom: 0;
+    width: 5px;
+    height: 0;
+    background: linear-gradient(
+        180deg,
+        rgb(255, 255, 113),
+        rgba(255, 255, 113, 0.5),
+        transparent 70%
+    );
+}
+
+.top {
+    animation: animateTop 3s ease-in-out infinite;
+}
+
+.bottom {
+    animation: animateBottom 3s ease-in-out infinite;
+}
+
+.right {
+    animation: animateRight 3s ease-in-out infinite;
+}
+
+.left {
+    animation: animateLeft 3s ease-in-out infinite;
+}
+
+@keyframes animateTop {
+    25% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    30%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animateBottom {
+    0%,
+    50% {
+        opacity: 0;
+        width: 0;
+    }
+
+    75% {
+        opacity: 1;
+        width: 100%;
+    }
+
+    76%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animateRight {
+    0%,
+    25% {
+        opacity: 0;
+        height: 0;
+    }
+
+    50% {
+        opacity: 1;
+        height: 100%;
+    }
+
+    55%,
+    100% {
+        height: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes animateLeft {
+    0%,
+    75% {
+        opacity: 0;
+        bottom: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+/*---------------------------------------------------- */
