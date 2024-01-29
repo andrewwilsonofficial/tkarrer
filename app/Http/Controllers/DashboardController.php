@@ -102,9 +102,35 @@ class DashboardController extends Controller
 
     public function reports()
     {
-        $reports = Report::where('report_type', 'report')->orderBy('id', 'desc')->paginate(30);
+        $reports = Report::where('report_type', 'report')->orderBy('id', 'desc');
 
-        return view('dashboard.reports.index', compact('reports'));
+        $all_categories = Category::all();
+        $all_sources = $reports->pluck('source')->unique();
+        $all_years = $reports->pluck('published_at')->unique();
+
+        if (request()->has('category_id') && request()->category_id != '') {
+            $reports = $reports->where('category_id', request()->category_id);
+        }
+
+        if (request()->has('source') && request()->source != '') {
+            $reports = $reports->where('source', request()->source);
+        }
+
+        if (request()->has('year') && request()->year != '') {
+            $reports = $reports->where('published_at', request()->year);
+        }
+
+        if (request()->has('search') && request()->search != '') {
+            $reports = $reports->where('name', 'like', '%' . request()->search . '%');
+        }
+
+        $all_years = $all_years->map(function ($item) {
+            return date('Y', strtotime($item));
+        });
+
+        $reports = $reports->paginate(30);
+
+        return view('dashboard.reports.index', compact('reports', 'all_categories', 'all_sources', 'all_years'));
     }
 
     public function createReport()
@@ -191,9 +217,35 @@ class DashboardController extends Controller
 
     public function proofs()
     {
-        $proofs = Report::where('report_type', 'proof')->orderBy('id', 'desc')->paginate(30);
+        $proofs = Report::where('report_type', 'proof')->orderBy('id', 'desc');
 
-        return view('dashboard.proofs.index', compact('proofs'));
+        $all_categories = Category::all();
+        $all_sources = $proofs->pluck('source')->unique();
+        $all_years = $proofs->pluck('published_at')->unique();
+
+        if (request()->has('category_id') && request()->category_id != '') {
+            $proofs = $proofs->where('category_id', request()->category_id);
+        }
+
+        if (request()->has('source') && request()->source != '') {
+            $proofs = $proofs->where('source', request()->source);
+        }
+
+        if (request()->has('year') && request()->year != '') {
+            $proofs = $proofs->where('published_at', request()->year);
+        }
+
+        if (request()->has('search') && request()->search != '') {
+            $proofs = $proofs->where('name', 'like', '%' . request()->search . '%');
+        }
+
+        $all_years = $all_years->map(function ($item) {
+            return date('Y', strtotime($item));
+        });
+
+        $proofs = $proofs->paginate(30);
+
+        return view('dashboard.proofs.index', compact('proofs', 'all_categories', 'all_sources', 'all_years'));
     }
 
     public function createProof()

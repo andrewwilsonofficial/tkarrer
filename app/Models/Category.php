@@ -11,6 +11,11 @@ class Category extends Model
 
     public function reports()
     {
-        return $this->hasMany(Report::class);
+        return $this->hasMany(Report::class)->where('report_type', 'report');
+    }
+
+    public function proofs()
+    {
+        return $this->hasMany(Report::class)->where('report_type', 'proof');
     }
 }

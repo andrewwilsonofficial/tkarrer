@@ -28,6 +28,15 @@
                                     <h5>
                                         {{ $category->name }}
                                     </h5>
+                                    <b>
+                                        {{ $category->reports->count() }}
+                                        تقرير
+                                    </b>
+                                    <br>
+                                    <b>
+                                        {{ $category->proofs->count() }}
+                                        دليل
+                                    </b>
                                 </div>
                                 <div class="col-12 mt-2 text-center">
                                     <div class="btn-group">
@@ -42,7 +51,8 @@
                                                     <i class="menu-icon tf-icons bx bx-edit"></i>
                                                 </a>
 
-                                                <button type="button" class="btn btn-danger btn-sm remove-btn delete-report"
+                                                <button type="button"
+                                                    class="btn btn-danger btn-sm remove-btn delete-report"
                                                     data-name="{{ $category->name }}" data-id="{{ $category->id }}">
                                                     حذف
                                                     <i class="menu-icon tf-icons bx bx-trash"></i>

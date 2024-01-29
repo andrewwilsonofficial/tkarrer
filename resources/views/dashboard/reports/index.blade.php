@@ -31,6 +31,76 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-12 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="{{ route('admin-proofs') }}" method="GET">
+                            <div class="row">
+                                <div class="col-12 text-center mb-3">
+                                    <h3>
+                                        الفلتره
+                                    </h3>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="category_id">
+                                        الفئة
+                                    </label>
+                                    <select name="category_id" id="category_id" class="form-select">
+                                        <option value="">الكل</option>
+                                        @foreach ($all_categories as $category)
+                                            <option value="{{ $category->id }}"
+                                                {{ request()->category_id == $category->id ? 'selected' : '' }}>
+                                                {{ $category->name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="source">
+                                        المصدر
+                                    </label>
+                                    <select name="source" id="source" class="form-select">
+                                        <option value="">الكل</option>
+                                        @foreach ($all_sources as $source)
+                                            <option value="{{ $source }}"
+                                                {{ request()->source == $source ? 'selected' : '' }}>
+                                                {{ $source }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="year">
+                                        العام
+                                    </label>
+                                    <select name="year" id="year" class="form-select">
+                                        <option value="">الكل</option>
+                                        @foreach ($all_years as $year)
+                                            <option value="{{ $year }}"
+                                                {{ request()->year == $year ? 'selected' : '' }}>
+                                                {{ $year }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="search">
+                                        البحث
+                                    </label>
+                                    <input type="text" name="search" id="search" class="form-control"
+                                        placeholder="البحث عن اسم" value="{{ request()->search }}">
+                                </div>
+                                <div class="col-12 mt-3 text-center">
+                                    <button type="submit" class="btn btn-primary">
+                                        بحث
+                                        <i class="bx bx-search-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
@@ -107,7 +177,7 @@
                 </div>
             </div>
             <div class="col-12 mt-3">
-                {{ $reports->links('pagination.admin') }}
+                {{ $reports->appends(request()->input())->links('pagination.admin') }}
             </div>
         </div>
     </div>
