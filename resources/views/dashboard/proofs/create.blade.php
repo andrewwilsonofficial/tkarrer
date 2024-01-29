@@ -32,7 +32,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="published_at" class="form-label">
-                            المصدر
+                            التاريخ
                         </label>
                         <input type="date" class="form-control @error('published_at') is-invalid @enderror" id="published_at"
                             name="published_at" value="{{ old('published_at') }}" required>
