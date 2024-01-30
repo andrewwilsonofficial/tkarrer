@@ -108,8 +108,6 @@ class DashboardController extends Controller
         $all_sources = $reports->pluck('source')->unique();
         $all_years = $reports->pluck('published_at')->unique();
 
-        dd($all_years);
-
         if (request()->has('category_id') && request()->category_id != '') {
             $reports = $reports->where('category_id', request()->category_id);
         }
@@ -125,10 +123,6 @@ class DashboardController extends Controller
         if (request()->has('search') && request()->search != '') {
             $reports = $reports->where('name', 'like', '%' . request()->search . '%');
         }
-
-        $all_years = $all_years->map(function ($item) {
-            return date('Y', strtotime($item));
-        });
 
         $all_years = $all_years->unique();
 
@@ -250,10 +244,6 @@ class DashboardController extends Controller
         if (request()->has('search') && request()->search != '') {
             $proofs = $proofs->where('name', 'like', '%' . request()->search . '%');
         }
-
-        $all_years = $all_years->map(function ($item) {
-            return date('Y', strtotime($item));
-        });
 
         $all_years = $all_years->unique();
 
