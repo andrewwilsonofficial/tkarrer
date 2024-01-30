@@ -32,27 +32,29 @@
                     </h2>
                 </div>
                 @foreach ($categories as $category)
-                    <div class="col category mt-3">
-                        <a href="{{ route('reports', ['slug' => $category->slug]) }}">
-                            <div class="card border-0">
-                                <div class="card-body category-card">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <img src="{{ asset('assets/images/category/' . $category->icon) }}"
-                                                alt="{{ $category->name }}">
-                                        </div>
-                                        <div class="col-12 text-center mt-2">
-                                            <h5>
-                                                {{ $category->name }}
-                                            </h5>
+                    @if ($category->reports->count() > 0)
+                        <div class="col category mt-3">
+                            <a href="{{ route('reports', ['slug' => $category->slug]) }}">
+                                <div class="card border-0">
+                                    <div class="card-body category-card">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <img src="{{ asset('assets/images/category/' . $category->icon) }}"
+                                                    alt="{{ $category->name }}" width="72" height="72">
+                                            </div>
+                                            <div class="col-12 text-center mt-2">
+                                                <h5>
+                                                    {{ $category->name }}
+                                                </h5>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    @if ($loop->iteration % 5 == 0)
-                        <div class="col-12 mt-3"></div>
+                            </a>
+                        </div>
+                        @if ($loop->iteration % 5 == 0)
+                            <div class="col-12 mt-3"></div>
+                        @endif
                     @endif
                 @endforeach
             </div>
@@ -68,27 +70,29 @@
                     </h2>
                 </div>
                 @foreach ($categories as $category)
-                    <div class="col category mt-3">
-                        <a href="{{ route('proofs', ['slug' => $category->slug]) }}">
-                            <div class="card border-0">
-                                <div class="card-body category-card">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <img src="{{ asset('assets/images/category/' . $category->icon) }}"
-                                                alt="{{ $category->name }}">
-                                        </div>
-                                        <div class="col-12 text-center mt-2">
-                                            <h5>
-                                                {{ $category->name }}
-                                            </h5>
+                    @if ($category->proofs->count() > 0)
+                        <div class="col category mt-3">
+                            <a href="{{ route('proofs', ['slug' => $category->slug]) }}">
+                                <div class="card border-0">
+                                    <div class="card-body category-card">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <img src="{{ asset('assets/images/category/' . $category->icon) }}"
+                                                    alt="{{ $category->name }}" width="72" height="72">
+                                            </div>
+                                            <div class="col-12 text-center mt-2">
+                                                <h5>
+                                                    {{ $category->name }}
+                                                </h5>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    @if ($loop->iteration % 5 == 0)
-                        <div class="col-12 mt-3"></div>
+                            </a>
+                        </div>
+                        @if ($loop->iteration % 5 == 0)
+                            <div class="col-12 mt-3"></div>
+                        @endif
                     @endif
                 @endforeach
             </div>

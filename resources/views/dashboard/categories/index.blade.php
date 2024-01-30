@@ -22,7 +22,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <img src="{{ asset('assets/images/category/' . $category->icon) }}"
-                                        alt="{{ $category->name }}">
+                                        alt="{{ $category->name }}" width="72" height="72">
                                 </div>
                                 <div class="col-12 text-center mt-2">
                                     <h5>

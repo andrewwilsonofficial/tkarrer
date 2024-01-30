@@ -26,7 +26,7 @@ class ReportFactory extends Factory
         }
 
         return [
-            'category_id' => $this->faker->numberBetween(1, 10),
+            'category_id' => $this->faker->numberBetween(1, 9),
             'name' => $this->faker->realText(60),
             'source' => $source,
             'url' => $this->faker->url(),
