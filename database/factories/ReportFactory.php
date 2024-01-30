@@ -30,7 +30,7 @@ class ReportFactory extends Factory
             'name' => $this->faker->realText(60),
             'source' => $source,
             'url' => $this->faker->url(),
-            'published_at' => $this->faker->date(),
+            'published_at' => $this->faker->year(),
             'description' => $this->faker->realText(1000),
             'report_type' => $this->faker->randomElement(['report', 'proof']),
             'file_path' => 'example.pdf'

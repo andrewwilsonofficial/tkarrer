@@ -1,5 +1,9 @@
 @extends('layouts.dashboard-master')
 @section('title', 'إضافة دليل جديد')
+@section('head')
+    @parent
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-datepicker.min.css') }}">
+@endsection
 @section('content')
     <!-- Content -->
     <div class="container-xxl flex-grow-1 container-p-y">
@@ -32,9 +36,9 @@
                     </div>
                     <div class="mb-3">
                         <label for="published_at" class="form-label">
-                            التاريخ
+                            العام
                         </label>
-                        <input type="date" class="form-control @error('published_at') is-invalid @enderror" id="published_at"
+                        <input type="text" class="form-control published_at @error('published_at') is-invalid @enderror" id="published_at"
                             name="published_at" value="{{ old('published_at') }}" required>
                         @error('published_at')
                             <div class="invalid-feedback">{{ $message }}</div>
@@ -97,4 +101,20 @@
         </div>
     </div>
     <!-- / Content -->
+@endsection
+@section('scripts')
+    @parent
+    <script src="{{ asset('assets/js/bootstrap-datepicker.min.js') }}?123"></script>
+    <script>
+        $('.published_at').datepicker({
+            format: 'yyyy',
+            viewMode: 'years',
+            minViewMode: 'years',
+            autoclose: true,
+            clearBtn: true,
+            todayHighlight: false,
+            endDate: new Date(),
+            language: 'ar',
+        });
+    </script>
 @endsection

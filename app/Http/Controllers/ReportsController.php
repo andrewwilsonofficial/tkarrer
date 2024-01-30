@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Report;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ReportsController extends Controller
 {
@@ -42,7 +43,7 @@ class ReportsController extends Controller
 
         if (request('published_at')) {
             $published_at = request('published_at');
-            $reports->whereYear('published_at', request('published_at'));
+            $reports->where('published_at', request('published_at'));
         } else {
             $published_at = null;
         }
@@ -91,7 +92,7 @@ class ReportsController extends Controller
 
         if (request('published_at')) {
             $published_at = request('published_at');
-            $reports->whereYear('published_at', request('published_at'));
+            $reports->where('published_at', request('published_at'));
         } else {
             $published_at = null;
         }

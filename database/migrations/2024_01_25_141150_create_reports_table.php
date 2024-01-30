@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('source');
             $table->text('url');
-            $table->date('published_at');
+            $table->year('published_at');
             $table->text('file_path');
             $table->text('description');
             $table->enum('report_type', ['report', 'proof'])->default('report');
