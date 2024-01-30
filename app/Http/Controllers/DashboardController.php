@@ -128,6 +128,8 @@ class DashboardController extends Controller
             return date('Y', strtotime($item));
         });
 
+        $all_years = $all_years->unique();
+
         $all_years = $all_years->sortByDesc(function ($item) {
             return $item;
         });
@@ -250,6 +252,8 @@ class DashboardController extends Controller
         $all_years = $all_years->map(function ($item) {
             return date('Y', strtotime($item));
         });
+        
+        $all_years = $all_years->unique();
 
         $all_years = $all_years->sortByDesc(function ($item) {
             return $item;
