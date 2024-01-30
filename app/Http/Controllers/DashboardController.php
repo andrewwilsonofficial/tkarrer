@@ -117,7 +117,7 @@ class DashboardController extends Controller
         }
 
         if (request()->has('year') && request()->year != '') {
-            $reports = $reports->where('published_at', request()->year);
+            $reports = $reports->whereYear('published_at', request()->year);
         }
 
         if (request()->has('search') && request()->search != '') {
@@ -242,7 +242,7 @@ class DashboardController extends Controller
         }
 
         if (request()->has('year') && request()->year != '') {
-            $proofs = $proofs->where('published_at', request()->year);
+            $proofs = $proofs->whereYear('published_at', request()->year);
         }
 
         if (request()->has('search') && request()->search != '') {
@@ -252,7 +252,7 @@ class DashboardController extends Controller
         $all_years = $all_years->map(function ($item) {
             return date('Y', strtotime($item));
         });
-        
+
         $all_years = $all_years->unique();
 
         $all_years = $all_years->sortByDesc(function ($item) {
