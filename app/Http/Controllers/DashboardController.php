@@ -128,7 +128,15 @@ class DashboardController extends Controller
             return date('Y', strtotime($item));
         });
 
-        $reports = $reports->paginate(30);
+        $all_years = $all_years->sortByDesc(function ($item) {
+            return $item;
+        });
+
+        $all_sources = $all_sources->sortByDesc(function ($item) {
+            return $item;
+        });
+
+        $reports = $reports->paginate(20);
 
         return view('dashboard.reports.index', compact('reports', 'all_categories', 'all_sources', 'all_years'));
     }
@@ -243,7 +251,15 @@ class DashboardController extends Controller
             return date('Y', strtotime($item));
         });
 
-        $proofs = $proofs->paginate(30);
+        $all_years = $all_years->sortByDesc(function ($item) {
+            return $item;
+        });
+
+        $all_sources = $all_sources->sortByDesc(function ($item) {
+            return $item;
+        });
+
+        $proofs = $proofs->paginate(20);
 
         return view('dashboard.proofs.index', compact('proofs', 'all_categories', 'all_sources', 'all_years'));
     }
