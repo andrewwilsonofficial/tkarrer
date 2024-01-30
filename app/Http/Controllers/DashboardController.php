@@ -108,6 +108,8 @@ class DashboardController extends Controller
         $all_sources = $reports->pluck('source')->unique();
         $all_years = $reports->pluck('published_at')->unique();
 
+        dd($all_years);
+
         if (request()->has('category_id') && request()->category_id != '') {
             $reports = $reports->where('category_id', request()->category_id);
         }
