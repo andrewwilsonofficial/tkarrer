@@ -157,7 +157,7 @@ class DashboardController extends Controller
             'name' => 'required|string|max:255',
             'source' => 'required|string|max:255',
             'url' => 'required|string|max:255',
-            'published_at' => 'required|date',
+            'published_at' => 'required|year',
             'file' => 'required|file|mimes:pdf',
             'description' => 'required|string',
         ]);
@@ -194,7 +194,7 @@ class DashboardController extends Controller
             'name' => 'required|string|max:255',
             'source' => 'required|string|max:255',
             'url' => 'required|string|max:255',
-            'published_at' => 'required|date',
+            'published_at' => 'required|year',
             'file' => 'nullable|file|mimes:pdf',
             'description' => 'required|string',
         ]);
@@ -282,7 +282,7 @@ class DashboardController extends Controller
             'name' => 'required|string|max:255',
             'source' => 'required|string|max:255',
             'url' => 'required|string|max:255',
-            'published_at' => 'required|date',
+            'published_at' => 'required|year',
             'file' => 'required|file|mimes:pdf',
             'description' => 'required|string',
         ]);
@@ -319,7 +319,7 @@ class DashboardController extends Controller
             'name' => 'required|string|max:255',
             'source' => 'required|string|max:255',
             'url' => 'required|string|max:255',
-            'published_at' => 'required|date',
+            'published_at' => 'required|year',
             'file' => 'nullable|file|mimes:pdf',
             'description' => 'required|string',
         ]);
