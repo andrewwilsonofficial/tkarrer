@@ -100,7 +100,7 @@
                                                     {{ $report->source }}
                                                 </div>
                                                 <div class="col-md-2 date-column text-right d-flex align-items-center">
-                                                    {{ date('Y', strtotime($report->published_at)) }}
+                                                    {{ $report->published_at }}
                                                 </div>
                                                 <div class="col-md-2 options-column text-right d-flex align-items-center">
                                                     <span class="view-button">
@@ -143,7 +143,7 @@
                                                     </p>
                                                     <p>
                                                         <b>العام:</b>
-                                                        {{ date('Y', strtotime($report->published_at)) }}
+                                                        {{ $report->published_at }}
                                                     </p>
                                                 </div>
                                                 <div class="col-6 only-mobile">
