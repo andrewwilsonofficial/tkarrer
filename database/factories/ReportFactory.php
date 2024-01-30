@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Report;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,10 +17,18 @@ class ReportFactory extends Factory
      */
     public function definition(): array
     {
+        $current_sources = Report::select('source')->distinct()->get()->pluck('source')->toArray();
+
+        if (count($current_sources) > 20) {
+            $source = $this->faker->randomElement($current_sources);
+        } else {
+            $source = $this->faker->company();
+        }
+
         return [
             'category_id' => $this->faker->numberBetween(1, 10),
             'name' => $this->faker->realText(60),
-            'source' => $this->faker->company(),
+            'source' => $source,
             'url' => $this->faker->url(),
             'published_at' => $this->faker->date(),
             'description' => $this->faker->realText(1000),
