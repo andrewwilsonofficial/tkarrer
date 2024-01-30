@@ -19,7 +19,7 @@ class ReportFactory extends Factory
     {
         $current_sources = Report::select('source')->distinct()->get()->pluck('source')->toArray();
 
-        if (count($current_sources) > 10) {
+        if (count($current_sources) > 20) {
             $source = $this->faker->randomElement($current_sources);
         } else {
             $source = $this->faker->company();
