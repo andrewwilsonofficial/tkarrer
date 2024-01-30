@@ -49,7 +49,7 @@
                             اضافة رابط الدراسة
                         </label>
                         <input type="url" class="form-control @error('url') is-invalid @enderror" id="url"
-                            name="url" value="{{ old('url') }}" required>
+                            name="url" value="{{ old('url') }}">
                         @error('url')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
