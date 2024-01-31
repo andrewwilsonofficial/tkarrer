@@ -152,8 +152,8 @@ class DashboardController extends Controller
             'category_id' => 'required|exists:categories,id',
             'name' => 'required|string|max:255',
             'source' => 'required|string|max:255',
-            'url' => 'nulled|string|max:255',
-            'published_at' => 'required|digits:4',
+            'url' => 'nullable|string|max:255',
+            'published_at' => 'required|digits:4|integer|min:1000|max:' . (date('Y') + 1),
             'file' => 'required|file|mimes:pdf',
             'description' => 'required|string',
         ]);
@@ -189,9 +189,9 @@ class DashboardController extends Controller
             'category_id' => 'required|exists:categories,id',
             'name' => 'required|string|max:255',
             'source' => 'required|string|max:255',
-            'url' => 'nulled|string|max:255',
-            'published_at' => 'required|digits:4',
-            'file' => 'file|mimes:pdf',
+            'url' => 'nullable|string|max:255',
+            'published_at' => 'required|digits:4|integer|min:1000|max:' . (date('Y') + 1),
+            'file' => 'nullable|file|mimes:pdf',
             'description' => 'required|string',
         ]);
 
@@ -273,8 +273,8 @@ class DashboardController extends Controller
             'category_id' => 'required|exists:categories,id',
             'name' => 'required|string|max:255',
             'source' => 'required|string|max:255',
-            'url' => 'nulled|string|max:255',
-            'published_at' => 'required|digits:4',
+            'url' => 'nullable|string|max:255',
+            'published_at' => 'required|digits:4|integer|min:1000|max:' . (date('Y') + 1),
             'file' => 'required|file|mimes:pdf',
             'description' => 'required|string',
         ]);
@@ -310,9 +310,9 @@ class DashboardController extends Controller
             'category_id' => 'required|exists:categories,id',
             'name' => 'required|string|max:255',
             'source' => 'required|string|max:255',
-            'url' => 'nulled|string|max:255',
-            'published_at' => 'required|digits:4',
-            'file' => 'file|mimes:pdf',
+            'url' => 'nullable|string|max:255',
+            'published_at' => 'required|digits:4|integer|min:1000|max:' . (date('Y') + 1),
+            'file' => 'nullable|file|mimes:pdf',
             'description' => 'required|string',
         ]);
 
