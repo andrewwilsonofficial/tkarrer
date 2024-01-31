@@ -152,10 +152,10 @@ class DashboardController extends Controller
             'category_id' => 'required|exists:categories,id',
             'name' => 'required|string|max:255',
             'source' => 'required|string|max:255',
-            'url' => 'nulled|string|max:255',
-            'published_at' => 'required|digits:4|integer|min:1000|max:' . (date('Y') + 1),
-            'file' => 'required|file|mimes:pdf',
-            'description' => 'required|string',
+            // 'url' => 'nulled|string|max:255',
+            // 'published_at' => 'required|digits:4|integer|min:1000|max:' . (date('Y') + 1),
+            // 'file' => 'required|file|mimes:pdf',
+            // 'description' => 'required|string',
         ]);
 
         $report = new Report();
