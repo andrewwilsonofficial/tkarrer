@@ -153,9 +153,9 @@ class DashboardController extends Controller
             'name' => 'required|string|max:255',
             'source' => 'required|string|max:255',
             'url' => 'nulled|string|max:255',
-            'published_at' => 'required|digits:4|integer|min:1000|max:' . (date('Y') + 1),
-            // 'file' => 'required|file|mimes:pdf',
-            // 'description' => 'required|string',
+            'published_at' => 'required|digits:4',
+            'file' => 'required|file|mimes:pdf',
+            'description' => 'required|string',
         ]);
 
         $report = new Report();
@@ -190,7 +190,7 @@ class DashboardController extends Controller
             'name' => 'required|string|max:255',
             'source' => 'required|string|max:255',
             'url' => 'nulled|string|max:255',
-            'published_at' => 'required|digits:4|integer|min:1000|max:' . (date('Y') + 1),
+            'published_at' => 'required|digits:4',
             'file' => 'nullable|file|mimes:pdf',
             'description' => 'required|string',
         ]);
@@ -274,7 +274,7 @@ class DashboardController extends Controller
             'name' => 'required|string|max:255',
             'source' => 'required|string|max:255',
             'url' => 'nulled|string|max:255',
-            'published_at' => 'required|digits:4|integer|min:1000|max:' . (date('Y') + 1),
+            'published_at' => 'required|digits:4',
             'file' => 'required|file|mimes:pdf',
             'description' => 'required|string',
         ]);
@@ -311,7 +311,7 @@ class DashboardController extends Controller
             'name' => 'required|string|max:255',
             'source' => 'required|string|max:255',
             'url' => 'nulled|string|max:255',
-            'published_at' => 'required|digits:4|integer|min:1000|max:' . (date('Y') + 1),
+            'published_at' => 'required|digits:4',
             'file' => 'nullable|file|mimes:pdf',
             'description' => 'required|string',
         ]);
