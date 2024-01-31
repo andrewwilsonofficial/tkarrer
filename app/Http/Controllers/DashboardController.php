@@ -191,7 +191,7 @@ class DashboardController extends Controller
             'source' => 'required|string|max:255',
             'url' => 'nulled|string|max:255',
             'published_at' => 'required|digits:4',
-            'file' => 'nullable|file|mimes:pdf',
+            'file' => 'file|mimes:pdf',
             'description' => 'required|string',
         ]);
 
@@ -312,7 +312,7 @@ class DashboardController extends Controller
             'source' => 'required|string|max:255',
             'url' => 'nulled|string|max:255',
             'published_at' => 'required|digits:4',
-            'file' => 'nullable|file|mimes:pdf',
+            'file' => 'file|mimes:pdf',
             'description' => 'required|string',
         ]);
 
