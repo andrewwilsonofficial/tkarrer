@@ -54,7 +54,8 @@
     </script>
     <script>
         $("body").on("click", ".view-report", function() {
-            var link = $(this).data('link');
+            var link = $(this).data('link'),
+                id = $(this).data('id');
             $("#legacy-link").attr("pdf-link", link);
             var link = "https://docs.google.com/gview?url=" + link + "&embedded=true";
             $("#viewer-iframe").hide();
@@ -62,11 +63,46 @@
             $("#viewer-iframe").attr('src', link).on('load', function() {
                 $("#loading").hide();
                 $("#viewer-iframe").show();
+
+                fetch("{{ url('/') }}/record-view/" + id, {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            // Add any additional headers if needed
+                        },
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        // Handle the response if needed
+                    })
+                    .catch(error => {
+                        console.error('There was a problem with the fetch operation:', error);
+                    });
             });
         });
 
         $("body").on("click", "#legacy-link", function() {
-            var link = $(this).attr('pdf-link');
+            var link = $(this).attr('pdf-link'),
+                id = $(this).data('id');
+
+            fetch("{{ url('/') }}/record-view/" + id, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        // Add any additional headers if needed
+                    },
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    // Handle the response if needed
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
 
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                 window.open(link, '_blank');

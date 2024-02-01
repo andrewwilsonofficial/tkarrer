@@ -124,6 +124,13 @@ class ReportsController extends Controller
 
     public function downloadReport(Report $report)
     {
+        $report->increment('downloads');
         return response()->download(public_path('uploads/' . $report->file_path), $report->name . '.pdf');
+    }
+
+    public function recordView(Report $report)
+    {
+        $report->increment('views');
+        return response()->json(['success' => true]);
     }
 }

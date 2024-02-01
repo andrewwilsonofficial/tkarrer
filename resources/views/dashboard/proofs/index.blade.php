@@ -121,6 +121,12 @@
                                         <th>
                                             الفئة
                                         </th>
+                                        <th>
+                                            التحميلات
+                                        </th>
+                                        <th>
+                                            المشاهدات
+                                        </th>
                                         <th class="text-center no-export">
                                             خيارات
                                         </th>
@@ -143,6 +149,12 @@
                                             </td>
                                             <td>
                                                 {{ $proof->category->name }}
+                                            </td>
+                                            <td>
+                                                {{ $proof->downloads }}
+                                            </td>
+                                            <td>
+                                                {{ $proof->views }}
                                             </td>
                                             <td class="text-center no-export">
                                                 <div class="btn-group">

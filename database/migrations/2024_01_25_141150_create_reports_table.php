@@ -22,6 +22,8 @@ return new class extends Migration
             $table->text('file_path');
             $table->text('description');
             $table->enum('report_type', ['report', 'proof'])->default('report');
+            $table->integer('downloads')->default(0);
+            $table->integer('views')->default(0);
             $table->timestamps();
         });
     }

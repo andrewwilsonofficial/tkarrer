@@ -28,12 +28,7 @@ Route::get('/search', [ReportsController::class, 'search'])->name('search');
 
 Route::get('/view-report/{report}', [ReportsController::class, 'viewReport'])->name('view-report');
 Route::get('/download-report/{report}', [ReportsController::class, 'downloadReport'])->name('download-report');
-
-Route::get('/test', function () {
-    $faker = Faker\Factory::create('ar_SA');
-
-    dd($faker->realText(10));
-});
+Route::get('/record-view/{report}', [ReportsController::class, 'recordView'])->name('record-view');
 
 Auth::routes();
 

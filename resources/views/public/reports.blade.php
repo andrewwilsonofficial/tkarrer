@@ -107,6 +107,7 @@
                                                         <a class="text-dark d-flex align-items-center view-report"
                                                             href="#!"
                                                             data-link="{{ asset('uploads/' . $report->file_path) }}"
+                                                            data-id="{{ $report->id }}"
                                                             data-toggle="modal" data-target="#viewerModal">
                                                             اطلاع
                                                             <img class="mr-2" src="{{ asset('assets/images/eye.svg') }}"
@@ -149,6 +150,7 @@
                                                 <div class="col-6 only-mobile">
                                                     <a class="btn btn-primary text-center view-report" href="#!"
                                                         data-link="{{ asset('uploads/' . $report->file_path) }}"
+                                                        data-id="{{ $report->id }}"
                                                         data-toggle="modal" data-target="#viewerModal">
                                                         اطلاع
                                                         <img class="mr-2" src="{{ asset('assets/images/eye.svg') }}"

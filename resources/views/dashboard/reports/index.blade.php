@@ -121,6 +121,12 @@
                                         <th>
                                             الفئة
                                         </th>
+                                        <th>
+                                            التحميلات
+                                        </th>
+                                        <th>
+                                            المشاهدات
+                                        </th>
                                         <th class="text-center no-export">
                                             خيارات
                                         </th>
@@ -143,6 +149,12 @@
                                             </td>
                                             <td>
                                                 {{ $report->category->name }}
+                                            </td>
+                                            <td>
+                                                {{ $report->downloads }}
+                                            </td>
+                                            <td>
+                                                {{ $report->views }}
                                             </td>
                                             <td class="text-center no-export">
                                                 <div class="btn-group">
