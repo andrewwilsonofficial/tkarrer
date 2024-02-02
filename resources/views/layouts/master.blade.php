@@ -117,6 +117,15 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function() {
+            // Check if the user is using an iOS device
+            if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+                // Hide the div on iOS devices
+                $("._4jKGSa").hide();
+            }
+        });
+    </script>
 </body>
 
 </html>
