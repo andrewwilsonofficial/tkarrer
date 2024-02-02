@@ -8,3 +8,4 @@
 <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/landing.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-datepicker.min.css') }}">
+<meta name="google-site-verification" content="D4euphY0tsZZ43OxEhKjKiSOERqNkXU74xZTMEIti3A" />
