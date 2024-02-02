@@ -1,4 +1,4 @@
-<span style="font-family: 'Droid Arabic Kufi', sans-serif; font-size: 18px; color: #000; direction: rtl; text-align: right;">
+<span style="direction: rtl; text-align: right;">
     <h1>
         بيانات الرسالة
     </h1>
