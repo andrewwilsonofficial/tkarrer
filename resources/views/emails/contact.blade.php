@@ -1,7 +1,13 @@
-<h1>
+<h1 style="direction: rtl; text-align: right;">
     بيانات الرسالة
 </h1>
 
-<p>الإسم: {{ $full_name }}</p>
-<p>البريد: {{ $email }}</p>
-<p>الرسالة: {{ $message_text }}</p>
+<p style="direction: rtl; text-align: right;">
+    الإسم: {{ $full_name }}
+</p>
+<p style="direction: rtl; text-align: right;">
+    البريد: {{ $email }}
+</p>
+<p style="direction: rtl; text-align: right;">
+    الرسالة: {{ $message_text }}
+</p>
