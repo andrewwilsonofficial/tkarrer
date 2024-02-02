@@ -13,6 +13,8 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3NBW6J1BT"></script>
 <style>
     * {
+        overflow-scrolling: touch;
+        scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
     }
 </style>
