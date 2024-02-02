@@ -31,10 +31,10 @@ class HomeController extends Controller
         ]);
 
         $full_name = $request->fname . ' ' . $request->lname;
-        $message = $request->message;
+        $message_text = $request->message;
         $email = $request->email;
 
-        Mail::send('emails.contact', ['full_name' => $full_name, 'message' => $message, 'email' => $email], function ($message) {
+        Mail::send('emails.contact', ['full_name' => $full_name, 'message_text' => $message_text, 'email' => $email], function ($message) {
             $message->to('anderewpoe2000@gmail.com', 'Admin')->subject('رسالة جديدة من الزائر');
         });
 
