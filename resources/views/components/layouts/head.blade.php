@@ -12,9 +12,8 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3NBW6J1BT"></script>
 <style>
-    /* Make scroll on ios smooth */
     * {
-        -webkit-overflow-scrolling: touch !important;
+        -webkit-overflow-scrolling: touch;
     }
 </style>
 <script>
