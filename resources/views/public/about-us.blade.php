@@ -115,7 +115,7 @@
         <div class="container-fluid mt-5 text-right">
             <div class="row">
                 <div class="col-md-6">
-                    <form action="mailto:yos.h.almuzaini@gmail.com" method="post" id="contact-us-form">
+                    <form action="{{ route('send-message') }}" method="post" id="contact-us-form">
                         <div class="row">
                             <div class="col-12">
                                 <h2>
@@ -129,28 +129,28 @@
                                 <label for="fname">
                                     الاسم الاول
                                 </label>
-                                <input type="text" class="form-control" id="fname" name="الإسم الأول"
+                                <input type="text" class="form-control" id="fname" name="fname"
                                     placeholder="الاسم الاول">
                             </div>
                             <div class="col-md-6 mt-3">
                                 <label for="lname">
                                     الاسم الاخير
                                 </label>
-                                <input type="text" class="form-control" id="lname" name="الإسم الأخير"
+                                <input type="text" class="form-control" id="lname" name="lname"
                                     placeholder="الاسم الاخير">
                             </div>
                             <div class="col-md-12 mt-3">
                                 <label for="email">
                                     البريد الالكتروني
                                 </label>
-                                <input type="email" class="form-control" id="email" name="البريد"
+                                <input type="email" class="form-control" id="email" name="email"
                                     placeholder="البريد الالكتروني">
                             </div>
                             <div class="col-md-12 mt-3">
                                 <label for="message">
                                     الرسالة
                                 </label>
-                                <textarea class="form-control" id="message" name="الرسالة" rows="10" placeholder="اكتب رسالتك"></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="10" placeholder="اكتب رسالتك"></textarea>
                             </div>
                             <div class="col-md-12 text-center mt-3">
                                 <button type="submit" class="btn btn-primary btn-lg">

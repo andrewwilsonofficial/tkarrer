@@ -20,13 +20,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/من-نحن', [HomeController::class, 'aboutUs'])->name('about-us');
+Route::post('/send-message', [HomeController::class, 'sendMessage'])->name('send-message');
 
 Route::get('/التقارير-والدراسات/{slug?}', [ReportsController::class, 'index'])->name('reports');
 Route::get('/الادلة-المعرفية/{slug?}', [ReportsController::class, 'proofs'])->name('proofs');
 
 Route::get('/search', [ReportsController::class, 'search'])->name('search');
 
-Route::get('/view-report/{report}', [ReportsController::class, 'viewReport'])->name('view-report');
+Route::get('/report/{report}', [ReportsController::class, 'report'])->name('report');
 Route::get('/download-report/{report}', [ReportsController::class, 'downloadReport'])->name('download-report');
 Route::get('/record-view/{report}', [ReportsController::class, 'recordView'])->name('record-view');
 

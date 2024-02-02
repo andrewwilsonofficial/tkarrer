@@ -117,9 +117,9 @@ class ReportsController extends Controller
         return view('public.search', compact('page_title', 'search', 'reportsCount', 'proofsCount'));
     }
 
-    public function viewReport(Report $report)
+    public function report(Report $report)
     {
-        return view('public.view-report', compact('report'));
+        return response()->file(public_path('uploads/' . $report->file_path));
     }
 
     public function downloadReport(Report $report)
