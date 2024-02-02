@@ -14,7 +14,7 @@
 <style>
     /* Make scroll on ios smooth */
     * {
-        -webkit-overflow-scrolling: touch;
+        -webkit-overflow-scrolling: touch !important;
     }
 </style>
 <script>
