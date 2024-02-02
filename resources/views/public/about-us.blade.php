@@ -116,6 +116,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <form action="{{ route('send-message') }}" method="post" id="contact-us-form">
+                        @csrf
                         <div class="row">
                             <div class="col-12">
                                 <h2>
