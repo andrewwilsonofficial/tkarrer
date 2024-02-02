@@ -12,8 +12,7 @@
                         </a>
                     </span>
                     <span class="mx-2">
-                        <svg width="9" height="12" viewBox="0 0 9 12" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 0.808018V11.192L0.846001 6.00002L9 0.808018Z" fill="#303030" />
                         </svg>
                     </span>
@@ -107,9 +106,9 @@
                                                     <span class="view-button">
                                                         <a class="text-dark d-flex align-items-center view-report"
                                                             href="#!"
-                                                            data-link="{{ route('report', ['report' => $report->id]) }}"
-                                                            data-id="{{ $report->id }}" data-toggle="modal"
-                                                            data-target="#viewerModal">
+                                                            data-link="{{ asset('uploads/' . $report->file_path) }}"
+                                                            data-id="{{ $report->id }}"
+                                                            data-toggle="modal" data-target="#viewerModal">
                                                             اطلاع
                                                             <img class="mr-2" src="{{ asset('assets/images/eye.svg') }}"
                                                                 alt="اطلاع">
@@ -150,9 +149,9 @@
                                                 </div>
                                                 <div class="col-6 only-mobile">
                                                     <a class="btn btn-primary text-center view-report" href="#!"
-                                                        data-link="{{ route('report', ['report' => $report->id]) }}"
-                                                        data-id="{{ $report->id }}" data-toggle="modal"
-                                                        data-target="#viewerModal">
+                                                        data-link="{{ asset('uploads/' . $report->file_path) }}"
+                                                        data-id="{{ $report->id }}"
+                                                        data-toggle="modal" data-target="#viewerModal">
                                                         اطلاع
                                                         <img class="mr-2" src="{{ asset('assets/images/eye.svg') }}"
                                                             alt="اطلاع">
