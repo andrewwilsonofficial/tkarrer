@@ -35,7 +35,7 @@ class HomeController extends Controller
         $email = $request->email;
 
         Mail::send('emails.contact', ['full_name' => $full_name, 'message' => $message, 'email' => $email], function ($message) {
-            $message->to('yos.h.almuzaini@gmail.com', 'Admin')->subject('رسالة جديدة من الزائر');
+            $message->to('anderewpoe2000@gmail.com', 'Admin')->subject('رسالة جديدة من الزائر');
         });
 
         return back()->with('success', 'تم إرسال الرسالة بنجاح');
