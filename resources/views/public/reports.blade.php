@@ -88,7 +88,7 @@
                             <div class="accordion">
                                 @foreach ($reports as $report)
                                     <div class="accordion-item mb-3">
-                                        <input type="checkbox" id="report{{ $report->id }}">
+                                        <input type="radio" name="report" id="report{{ $report->id }}">
                                         <label class="accordion-label" for="report{{ $report->id }}">
                                             <div class="row w-100">
                                                 <div class="col-md-5 col-10 text-right d-flex align-items-center">
