@@ -6,11 +6,24 @@
         ._4jKGSa {
             display: none !important;
         }
+
+        .category-card:hover {
+            background-color: unset !important;
+            color: unset !important;
+        }
+
+        .our-message {
+            border-right: 7px solid #3b5998;
+            padding-right: 14px;
+            font-size: 20px;
+            margin-bottom: 28px;
+            border-radius: 7px;
+        }
     </style>
     <section id="top-section"
-        style="height: 361px !important;background-image:url('{{ asset('assets/images/about-us-background.webp') }}') !important;">
+        style="height: 361px !important;background-image:url('{{ asset('assets/images/background-about-us.svg') }}') !important;">
         <div id="search-container" style="height: auto !important;">
-            <h1 class="main-title mt-5 text-white">
+            <h1 class="main-title mt-5 text-black">
                 تعرف على فكرة موقع تقارير
             </h1>
         </div>
@@ -23,15 +36,21 @@
                     <img src="{{ asset('assets/images/about-2.webp') }}" class="w-100" alt="رسالتنا">
                 </div>
                 <div class="col-md-12">
-                    <h2 class="our-message-text">
-                        رسالتنا
-                    </h2>
                     <p class="text-left">
                         <img src="{{ asset('assets/images/quotation.svg') }}" alt="quotation">
                     </p>
-                    <p class="our-message">
-                        {{ $our_message->value }}
-                    </p>
+                    <h3 class="our-message">
+                        يوفّر موقع تقارير قاعدة بيانات للتقارير والدراسات والأدلة المعرفية المنشورة والمعدة لغرض التداول،
+                        والتي تصدرها الجهات الحكومية أو الشركات أو القطاع الثالث.
+                    </h3>
+                    <h3 class="our-message">
+                        يعاني الباحثين والمهتمين من صعوبة في الوصول السريع والسهل إلى هذه الإصدارات لتفرقها في مواقع
+                        إلكترونية ومنصات تواصل مختلفة ومتعددة، أو لتعطل روابط الوصول إلى هذه الإصدارات مع مرور الوقت.
+                    </h3>
+                    <h3 class="our-message">
+                        يسعى موقع تقارير إلى تقديم تجربة مستخدم سريعة وسهلة للوصول إلى هذه الإصدارات المتداولة، مع بيان اسم
+                        الجهة المصدرة ورابط الوصول لها، مع إمكانية الاطلاع والتحميل
+                    </h3>
                     <p class="text-center mt-4">
                         <img src="{{ asset('assets/images/quotation.svg') }}" style="transform: scaleX(-1);"
                             alt="quotation">
@@ -548,7 +567,6 @@
                                 <div class="card-body category-card">
                                     <div class="row">
                                         <div class="col-12">
-
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 xmlns:xlink="http://www.w3.org/1999/xlink" data-name="Layer 1"
                                                 viewBox="0 0 1400 1000" id="robot-finding-data">
@@ -1185,7 +1203,6 @@
                                 <div class="card-body category-card">
                                     <div class="row">
                                         <div class="col-12">
-
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 enable-background="new 0 0 1000 1000" viewBox="0 0 1000 1000"
                                                 id="bitcoin-investment">
