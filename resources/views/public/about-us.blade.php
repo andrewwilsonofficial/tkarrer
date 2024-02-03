@@ -23,7 +23,7 @@
     <section id="top-section"
         style="height: 361px !important;background-image:url('{{ asset('assets/images/background-about-us.svg') }}') !important;">
         <div id="search-container" style="height: auto !important;">
-            <h1 class="main-title mt-5 text-black">
+            <h1 class="main-title mt-5 text-white">
                 تعرف على فكرة موقع تقارير
             </h1>
         </div>
@@ -36,9 +36,6 @@
                     <img src="{{ asset('assets/images/about-2.webp') }}" class="w-100" alt="رسالتنا">
                 </div>
                 <div class="col-md-12">
-                    <p class="text-left">
-                        <img src="{{ asset('assets/images/quotation.svg') }}" alt="quotation">
-                    </p>
                     <h3 class="our-message">
                         يوفّر موقع تقارير قاعدة بيانات للتقارير والدراسات والأدلة المعرفية المنشورة والمعدة لغرض التداول،
                         والتي تصدرها الجهات الحكومية أو الشركات أو القطاع الثالث.
@@ -51,10 +48,6 @@
                         يسعى موقع تقارير إلى تقديم تجربة مستخدم سريعة وسهلة للوصول إلى هذه الإصدارات المتداولة، مع بيان اسم
                         الجهة المصدرة ورابط الوصول لها، مع إمكانية الاطلاع والتحميل
                     </h3>
-                    <p class="text-center mt-4">
-                        <img src="{{ asset('assets/images/quotation.svg') }}" style="transform: scaleX(-1);"
-                            alt="quotation">
-                    </p>
                 </div>
             </div>
         </div>
@@ -555,7 +548,7 @@
                                         </div>
                                         <div class="col-12 text-center mt-2">
                                             <h5>
-                                                الاستشاريون
+                                                الباحثون
                                             </h5>
                                         </div>
                                     </div>
