@@ -29,7 +29,7 @@
                 </li>
                 <li class="nav-item {{ request()->routeIs('about-us') ? 'active' : '' }}">
                     <a class="nav-link mx-3" href="{{ route('about-us') }}">
-                        من نحن؟
+                        فكرة تقارير
                     </a>
                 </li>
             </ul>

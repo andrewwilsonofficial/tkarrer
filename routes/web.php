@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/من-نحن', [HomeController::class, 'aboutUs'])->name('about-us');
+Route::get('/فكرة-تقارير', [HomeController::class, 'aboutUs'])->name('about-us');
 Route::post('/send-message', [HomeController::class, 'sendMessage'])->name('send-message');
 
 Route::get('/التقارير-والدراسات/{slug?}', [ReportsController::class, 'index'])->name('reports');
